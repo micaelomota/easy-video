@@ -52,6 +52,7 @@ function VideoCard() {
       ref={videoRef}
       loop
       autoPlay
+      playsInline
       muted
       style={{
         objectFit: "cover",
