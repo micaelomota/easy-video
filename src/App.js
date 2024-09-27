@@ -1,14 +1,29 @@
-import logo from "./logo.svg";
 import "./App.css";
+
+function VideoCard() {
+  return (
+    <video
+      loop
+      style={{ objectFit: "cover", aspectRatio: 9 / 16 }}
+      autoPlay
+      muted
+    >
+      <source
+        src="https://github.com/micaelomota/easy-video/raw/refs/heads/gh-pages/easy-video.mp4"
+        type="video/mp4"
+      />
+    </video>
+  );
+}
 
 function App() {
   return (
-    <div>
-      <header>
-        <video width="320" height="240" controls loop>
-          <source src="/easy-video.mp4" type="video/mp4" />
-        </video>
-      </header>
+    <div className="">
+      <div className="grid grid-cols-3 gap-5">
+        <VideoCard />
+        <VideoCard />
+        <VideoCard />
+      </div>
     </div>
   );
 }
